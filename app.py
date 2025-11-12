@@ -23,7 +23,7 @@ TICKERS = {
 }
 DEFAULT_CASH = 10_000.0
 DEFAULT_THRESH = 0.0
-BROKER_FEE = 0.0  # puedes poner 0.001 para 0.1%
+BROKER_FEE = 0.0 
 STATE_FILE = "portfolio_state.json"
 
 
@@ -258,7 +258,7 @@ for tab, tic in zip(tabs, TICKERS.keys()):
         with colB:
             st.subheader("📌 Estado")
             st.metric("Precio actual (Close)", f"{last[f'{tic}_Close']:.2f} €")
-            st.metric("Predicción próxima", f"{df_with_pred.iloc[-1][f'{tic}_Pred_Close']:.2f} €")
+            st.metric("Predicción 04/11", f"{df_with_pred.iloc[-1][f'{tic}_Pred_Close']:.2f} €")
             st.metric("Recomendación", rec)
 
         with colC:
